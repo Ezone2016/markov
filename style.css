@@ -1,0 +1,18 @@
+body {
+    font-family: 'Lilita One', cursive;
+    text-align: center;
+    font-size: 28px;
+}
+
+#intro {
+    padding: 100px 50px 10px 50px;
+}
+
+#thing {
+    padding: 10px 50px 10px 50px;
+    font-size: 72px;
+}
+
+#refresh {
+    padding: 10px 50px 10px 50px;
+}

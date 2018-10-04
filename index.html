@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>27 Things You Made The World a Better Place</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="intro">Minella, the amazing thing about you is...</div>
+    <div id="thing"></div>
+    <div id="refresh">refresh for another thing</div>
+
+    <script>
+      $.get("things.txt", function(data) {
+
+        var things = data.split('\n');
+        things.pop(); // last element is an empty string
+        var index = Math.floor(Math.random() * things.length);
+        var thing = things[index];
+        document.getElementById("thing").innerHTML = '<p>' + thing + '</p>';
+
+      });
+
+      function randomColor(){
+        r = Math.floor(Math.random() * (256));
+        g = Math.floor(Math.random() * (256));
+        b = Math.floor(Math.random() * (256));
+        jQuery('body').css('background-color','rgb('+r+','+g+','+b+')');
+      }
+
+      jQuery(document).ready(function(){
+        randomColor();
+      });
+
+    </script>
+  </body>
+</html>
